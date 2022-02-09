@@ -1,0 +1,46 @@
+## command
+``` sh
+$ npx create-next-app
+$ cd create-next-app
+$ yarn dev
+```
+
+### ts の導入
+1. tsconfig.json を作成
+2. yarn add -D typescript @types/react @types/node
+3. tsconfig.json の一番上に、"baseUrl": ".", を加える
+
+``` json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es5",
+    "lib": [
+```
+
+### eslint の導入
+npx eslint --init
+
+1. problems
+1. JavaScript modules (import/export)
+1. ...
+1. Browser
+1. JavaScript
+
+.eslintrc.js の rules に以下を記述, settings もついか
+
+```
+ "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/ba-ts-comment": "off",
+        "react/react-in-jsx-scope": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+```
+
+### Tips
+- dev の方だとホットリロードがかかるので、yarn dev とかの方がいい
