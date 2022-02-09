@@ -42,5 +42,14 @@ npx eslint --init
     }
 ```
 
+yarn lint
+
+#### prettier 導入
+yarn add -D prettier eslint-plugin-prettier eslint-config-prettier
+
+```
+yarn lint --fix
+```
+
 ### Tips
 - dev の方だとホットリロードがかかるので、yarn dev とかの方がいい
