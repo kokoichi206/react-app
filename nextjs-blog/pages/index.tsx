@@ -1,4 +1,5 @@
-import Head from "next/head"
+import Head from "next/head";
+import { GetStaticProps } from "next";
 
 export default function Home() {
   return (
@@ -11,3 +12,9 @@ export default function Home() {
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+  };
+};
