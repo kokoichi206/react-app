@@ -53,3 +53,4 @@ yarn lint --fix
 
 ### Tips
 - dev の方だとホットリロードがかかるので、yarn dev とかの方がいい
+- [絵文字画像データ](https://emojipedia.org/)
