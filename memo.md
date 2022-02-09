@@ -51,6 +51,16 @@ yarn add -D prettier eslint-plugin-prettier eslint-config-prettier
 yarn lint --fix
 ```
 
+### md のため：mdx
+```
+yarn add next-mdx-remote gray-matter
+```
+
+gray-matter: md のメタ情報をパース
+
+
 ### Tips
 - dev の方だとホットリロードがかかるので、yarn dev とかの方がいい
 - [絵文字画像データ](https://emojipedia.org/)
+- nextはクライアントとサーバーサイドを同じファイルに書くようになっている
+    - 余計なコードはクライアント側に入らないような工夫
