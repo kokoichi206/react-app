@@ -2,9 +2,12 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import * as path from "path";
 import * as fs from "fs";
 import matter from "gray-matter";
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 
 interface Props {
-  content :string;
+  // source: Parameters<MDXRemote>[0];
+  source: MDXRemoteSerializeResult<Record<string, unknown>>;
   data: PostData;
 }
 
@@ -14,11 +17,11 @@ interface PostData {
   spoiler: string;
 }
 
-export default function Post({ content, data }: Props) {
+export default function Post({ source, data }: Props) {
   return (
     <>
       <pre>{JSON.stringify(data, null, 2)}</pre>
-      {content}
+      {MDXRemote(source)}
     </>
   );
 }
@@ -27,35 +30,37 @@ export default function Post({ content, data }: Props) {
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     // paths: [
-      // {
-      //   params: {
-      //     title: "post1"
-      //   },
-      // },
-      // {
-      //   params: {
-      //     title: "post2"
-      //   },
-      // },
-      // {
-      //   params: {
-      //     title: "post3"
-      //   },
-      // },
+    // {
+    //   params: {
+    //     title: "post1"
+    //   },
+    // },
+    // {
+    //   params: {
+    //     title: "post2"
+    //   },
+    // },
+    // {
+    //   params: {
+    //     title: "post3"
+    //   },
+    // },
     // ],
-    paths: getPostAll().map(m => ({ // gray-matterのオブジェクトのm
+    paths: getPostAll().map((m) => ({
+      // gray-matterのオブジェクトのm
       params: {
-        title: m.data.title
-      }
+        title: m.data.title,
+      },
     })),
     fallback: false,
   };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params: { title } }) => {
-  const {content, data} = getPostAll().find((m) => m.data.title === title)
+  const { content, data } = getPostAll().find((m) => m.data.title === title);
+  const source = await serialize(content);
   return {
-    props: {content, data},
+    props: { source, data },
   };
 };
 

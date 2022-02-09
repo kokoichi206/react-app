@@ -58,9 +58,15 @@ yarn add next-mdx-remote gray-matter
 
 gray-matter: md のメタ情報をパース
 
+#### memo
+- [next-mdx-remoteはv2->v3で大きな変化があったらしい](https://github.com/hashicorp/next-mdx-remote/releases/tag/3.0.0)
 
 ### Tips
 - dev の方だとホットリロードがかかるので、yarn dev とかの方がいい
 - [絵文字画像データ](https://emojipedia.org/)
 - nextはクライアントとサーバーサイドを同じファイルに書くようになっている
     - 余計なコードはクライアント側に入らないような工夫
+
+### 疑問
+- jsx?
+

@@ -8,6 +8,7 @@
     "lint": "eslint . --ext .js,.ts,.tsx"
   },
   "dependencies": {
+    "@next/mdx": "^12.0.10",
     "gray-matter": "^4.0.3",
     "next": "12.0.10",
     "next-mdx-remote": "^3.0.8",
