@@ -5,7 +5,6 @@ import Results from '../components/Results';
 import requests from '../utils/requests';
 
 export default function Home(props) {
-  console.log(props);
   return (
     <div>
       <Head>
@@ -21,7 +20,7 @@ export default function Home(props) {
       <Nav />
       
       {/* Results */}
-      <Results />
+      <Results results={props.results} />
     </div>
   );
 }
