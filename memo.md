@@ -80,6 +80,12 @@ yarn add @emotion/react @emotion/babel-plugin
 - [nextjs + typescript + emotion](https://zenn.dev/iwakin999/articles/7a5e11e62ba668)
 
 
+## yarn の管理
+``` sh
+$ yarn add ...
+$ yarn run dev
+```
+
 
 ## Tips
 - dev の方だとホットリロードがかかるので、yarn dev とかの方がいい
