@@ -105,11 +105,14 @@ react の Image は lazy loading に勝手になる？
 
 ## 疑問
 - jsx?
+- mobile first is better ???
+  - `w-12 sm:w-20`
 
 ## projects
 - [hulu](https://www.youtube.com/watch?v=MqDlsjc8GLo&ab_channel=SonnySangha)
   - [nextjs home](https://nextjs.org/learn/basics/create-nextjs-app/setup)
   - [tailwindcss](https://tailwindcss.com/)
+    - [heroicons](https://heroicons.com/)
   - [snippets](https://marketplace.visualstudio.com/items?itemName=rodrigovallades.es7-react-js-snippets)
     - rfce (react functional components)
 
