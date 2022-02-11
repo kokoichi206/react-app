@@ -113,6 +113,7 @@ react の Image は lazy loading に勝手になる？
   - [nextjs home](https://nextjs.org/learn/basics/create-nextjs-app/setup)
   - [tailwindcss](https://tailwindcss.com/)
     - [heroicons](https://heroicons.com/)
+    - [hide scrollbar](https://www.npmjs.com/package/tailwind-scrollbar-hide)
   - [snippets](https://marketplace.visualstudio.com/items?itemName=rodrigovallades.es7-react-js-snippets)
     - rfce (react functional components)
 
