@@ -91,7 +91,14 @@ yarn add @emotion/react @emotion/babel-plugin
 - app: 各ページのルートコンポーネントとして使われる
   - ページ全体のレイアウトとか
 - タグのことを、フラグメントって呼んでる
+- yarn 使うなら package.lock.json はいらない？
+  - 消した後に、`yarn`
 
 ## 疑問
 - jsx?
+
+## projects
+- [hulu](https://www.youtube.com/watch?v=MqDlsjc8GLo&ab_channel=SonnySangha)
+  - [nextjs home](https://nextjs.org/learn/basics/create-nextjs-app/setup)
+  - [tailwindcss](https://tailwindcss.com/)
 
