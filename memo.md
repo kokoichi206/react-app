@@ -95,6 +95,9 @@ react の Image は lazy loading に勝手になる？
 - [絵文字画像データ](https://emojipedia.org/)
 - nextはクライアントとサーバーサイドを同じファイルに書くようになっている
   - 余計なコードはクライアント側に入らないような工夫
+- .env.local
+  - process.env.API_KEY; のように読み込む
+  - yarn run dev の際に、nfo  - Loaded env from .. となってたら成功
 
 ## memo
 - app: 各ページのルートコンポーネントとして使われる
