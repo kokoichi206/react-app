@@ -105,6 +105,7 @@ react の Image は lazy loading に勝手になる？
 - タグのことを、フラグメントって呼んでる
 - yarn 使うなら package.lock.json はいらない？
   - 消した後に、`yarn`
+- yarn add react-flip-move
 
 ## 疑問
 - jsx?
