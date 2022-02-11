@@ -86,6 +86,9 @@ $ yarn add ...
 $ yarn run dev
 ```
 
+## react
+react の Image は lazy loading に勝手になる？
+
 
 ## Tips
 - dev の方だとホットリロードがかかるので、yarn dev とかの方がいい
@@ -107,4 +110,6 @@ $ yarn run dev
 - [hulu](https://www.youtube.com/watch?v=MqDlsjc8GLo&ab_channel=SonnySangha)
   - [nextjs home](https://nextjs.org/learn/basics/create-nextjs-app/setup)
   - [tailwindcss](https://tailwindcss.com/)
+  - [snippets](https://marketplace.visualstudio.com/items?itemName=rodrigovallades.es7-react-js-snippets)
+    - rfce (react functional components)
 
