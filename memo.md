@@ -80,18 +80,44 @@ yarn add @emotion/react @emotion/babel-plugin
 - [nextjs + typescript + emotion](https://zenn.dev/iwakin999/articles/7a5e11e62ba668)
 
 
+## yarn の管理
+``` sh
+$ yarn add ...
+$ yarn run dev
+```
+
+## react
+react の Image は lazy loading に勝手になる？
+
 
 ## Tips
 - dev の方だとホットリロードがかかるので、yarn dev とかの方がいい
 - [絵文字画像データ](https://emojipedia.org/)
 - nextはクライアントとサーバーサイドを同じファイルに書くようになっている
   - 余計なコードはクライアント側に入らないような工夫
+- .env.local
+  - process.env.API_KEY; のように読み込む
+  - yarn run dev の際に、nfo  - Loaded env from .. となってたら成功
 
 ## memo
 - app: 各ページのルートコンポーネントとして使われる
   - ページ全体のレイアウトとか
 - タグのことを、フラグメントって呼んでる
+- yarn 使うなら package.lock.json はいらない？
+  - 消した後に、`yarn`
+- yarn add react-flip-move
 
 ## 疑問
 - jsx?
+- mobile first is better ???
+  - `w-12 sm:w-20`
 
+## projects
+- [hulu](https://www.youtube.com/watch?v=MqDlsjc8GLo&ab_channel=SonnySangha)
+  - [nextjs home](https://nextjs.org/learn/basics/create-nextjs-app/setup)
+  - [tailwindcss](https://tailwindcss.com/)
+    - [heroicons](https://heroicons.com/)
+    - [hide scrollbar](https://www.npmjs.com/package/tailwind-scrollbar-hide)
+  - [snippets](https://marketplace.visualstudio.com/items?itemName=rodrigovallades.es7-react-js-snippets)
+    - rfce (react functional components)
+  - [TMDB](https://www.themoviedb.org/)
