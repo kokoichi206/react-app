@@ -2,6 +2,7 @@ import { useState } from "react";
 import { calculate, State } from "../logic/calclate";
 import ButtonPanel from "./ButtonPanel";
 import Display from "./Display";
+import "./Calculator.scss"
 
 export default function Calculator() {
 
