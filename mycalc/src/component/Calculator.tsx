@@ -18,7 +18,7 @@ export default function Calculator() {
 
   return (
     <div>
-      <Display />
+      <Display value={state.current} />
       <ButtonPanel buttonHandler={buttonHandler} />
     </div>
   );
