@@ -24,13 +24,34 @@ const items = [
   },
 ];
 
+const grid = 8;
+
+const getListStyle = (isDraggingOver) => ({
+  background: isDraggingOver ? "lightblue" : "lightgrey",
+  width: 250,
+  padding: grid,
+});
+
+const getItemStyle = (isDragging, draggableStyle) => ({
+  userSelect: "none",
+  padding: grid * 2,
+  margin: `0 0 ${grid} 0`,
+  background: isDragging ? "lightgreen" : "grey",
+
+  ...draggableStyle,
+});
+
 function App() {
   return (
     <div>
       <DragDropContext>
         <Droppable droppableId="droppable">
           {(provided, snapshot) => (
-            <div {...provided.droppableProps} ref={provided.innerRef}>
+            <div
+              {...provided.droppableProps}
+              ref={provided.innerRef}
+              style={getListStyle(snapshot.isDraggingOver)}
+            >
               {items.map((item, index) => (
                 <Draggable key={item.id} draggableId={item.id} index={index}>
                   {/* snapshot はスタイルを当てるためのもの */}
@@ -39,12 +60,18 @@ function App() {
                       ref={provided.innerRef}
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
+                      style={getItemStyle(
+                        snapshot.isDragging,
+                        provided.draggableProps.style
+                      )}
                     >
                       {item.content}
                     </div>
                   )}
                 </Draggable>
               ))}
+              {/* 移動中のところもスタイルを適応する */}
+              {provided.placeholder}
             </div>
           )}
         </Droppable>
