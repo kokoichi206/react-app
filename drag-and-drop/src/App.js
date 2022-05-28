@@ -41,10 +41,24 @@ const getItemStyle = (isDragging, draggableStyle) => ({
   ...draggableStyle,
 });
 
+const reorder = (list, startIndex, endIndex) => {
+  const removed = list.splice(startIndex, 1);
+  // console.log(removed);
+  list.splice(endIndex, 0, removed[0]);
+};
+
 function App() {
+  const onDragEnd = (result) => {
+    // console.log(result);
+    if (!result.destination) {
+      return;
+    }
+    reorder(items, result.source.index, result.destination.index);
+  };
+
   return (
     <div>
-      <DragDropContext>
+      <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="droppable">
           {(provided, snapshot) => (
             <div
